@@ -1,0 +1,167 @@
+<?php
+	
+if( function_exists('acf_add_local_field_group') ):
+
+$name_path = 'ts_social_media';
+
+acf_add_local_field_group(array (
+	'key' => 'group_' . $name_path,
+	'title' => __('Social Media','eagle'),
+	'fields' => array (
+		array (
+			'key' => 'field_' . $name_path . '__twitter',
+			'label' => __('Twitter','eagle'),
+			'name' => $name_path . '__twitter',
+			'type' => 'text',
+			'instructions' => __('Set your Twitter username (ex. johnappleseed).','eagle'),
+			'required' => 0,
+			'prepend' => 'https://twitter.com/',
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+		),
+		array (
+			'key' => 'field_' . $name_path . '__facebook',
+			'label' => __('Facebook','eagle'),
+			'name' => $name_path . '__facebook',
+			'type' => 'text',
+			'instructions' => __('Set your Facebook page link.','eagle'),
+			'required' => 0,
+			'prepend' => 'https://facebook.com/',
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+		),
+		array (
+			'key' => 'field_' . $name_path . '__linkedin',
+			'label' => __('Linkedin','eagle'),
+			'name' => $name_path . '__linkedin',
+			'type' => 'text',
+			'instructions' => __('Set your Linkedin page link.','eagle'),
+			'required' => 0,
+			'prepend' => 'https://linkedin.com/',
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+		),
+		array (
+			'key' => 'field_' . $name_path . '__google_plus',
+			'label' => __('Google +','eagle'),
+			'name' => $name_path . '__google_plus',
+			'type' => 'text',
+			'instructions' => __('Set your Google + page ID.','eagle'),
+			'required' => 0,
+			'prepend' => 'https://plus.google.com/',
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+		),
+		array (
+			'key' => 'field_' . $name_path . '__instagram',
+			'label' => __('Instagram','eagle'),
+			'name' => $name_path . '__instagram',
+			'type' => 'text',
+			'instructions' => __('Set your Instagram username (ex. johnappleseed).','eagle'),
+			'required' => 0,
+			'prepend' => 'https://instagram.com/',
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+		),
+		array (
+			'key' => 'field_' . $name_path . '__pinterest',
+			'label' => __('Pinterest','eagle'),
+			'name' => $name_path . '__pinterest',
+			'type' => 'text',
+			'instructions' => __('Set your Pinterest username (ex. johnappleseed).','eagle'),
+			'required' => 0,
+			'prepend' => 'https://pinterest.com/',
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+		),
+		array (
+			'key' => 'field_' . $name_path . '__youtube',
+			'label' => __('YouTube','eagle'),
+			'name' => $name_path . '__youtube',
+			'type' => 'text',
+			'instructions' => __('Set your YouTube username (ex. johnappleseed).','eagle'),
+			'required' => 0,
+			'prepend' => 'https://youtube.com/',
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+		),
+		array (
+			'key' => 'field_' . $name_path . '__vimeo',
+			'label' => __('Vimeo','eagle'),
+			'name' => $name_path . '__vimeo',
+			'type' => 'text',
+			'instructions' => __('Set your Vimeo username (ex. johnappleseed).','eagle'),
+			'required' => 0,
+			'prepend' => 'https://vimeo.com/',
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+		),
+	),
+	'location' => array (
+		array (
+			array (
+				'param' => 'options_page',
+				'operator' => '==',
+				'value' => 'social-media-settings',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+));
+
+endif;
+
+?>
