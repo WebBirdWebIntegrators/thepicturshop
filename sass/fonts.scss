@@ -1,0 +1,191 @@
+@mixin font-Default-Settings {
+	font-style: normal;
+	font-weight: normal;
+	//font-size-adjust: 0.5;
+	-webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	//text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
+
+// Font 1
+
+@mixin font1-Ultra-Light {
+	@include font-Default-Settings;
+	font-family: $font1, $font-Default-Font-Family;
+	font-weight: 100;
+}
+
+@mixin font1-Ultra-Light-Italic {
+	@include font-Default-Settings;
+	font-family: $font1, $font-Default-Font-Family;
+	font-weight: 100;
+	font-style: italic;
+}
+
+@mixin font1-Light {
+	@include font-Default-Settings;
+	font-family: $font1, $font-Default-Font-Family;
+	font-weight: 300;
+}
+
+@mixin font1-Light-Italic {
+	@include font-Default-Settings;
+	font-family: $font1, $font-Default-Font-Family;
+	font-weight: 300;
+	font-style: italic;
+}
+
+@mixin font1-Regular {
+	@include font-Default-Settings;
+	font-family: $font1, $font-Default-Font-Family;
+	font-weight: 400;
+}
+
+@mixin font1-Regular-Italic {
+	@include font-Default-Settings;
+	font-family: $font1, $font-Default-Font-Family;
+	font-weight: 400;
+	font-style: italic;
+}
+
+@mixin font1-Medium {
+	@include font-Default-Settings;
+	font-family: $font1, $font-Default-Font-Family;
+	font-weight: 500;
+}
+
+@mixin font1-Medium-Italic {
+	@include font-Default-Settings;
+	font-family: $font1, $font-Default-Font-Family;
+	font-weight: 500;
+	font-style: italic;
+}
+
+@mixin font1-Bold {
+	@include font-Default-Settings;
+	font-family: $font1, $font-Default-Font-Family;
+	font-weight: 700;
+}
+
+@mixin font1-Bold-Italic {
+	@include font-Default-Settings;
+	font-family: $font1, $font-Default-Font-Family;
+	font-style: italic;
+}
+
+@mixin font1-Extra-Bold {
+	@include font-Default-Settings;
+	font-family: $font1, $font-Default-Font-Family;
+	font-weight: 900;
+}
+
+@mixin font1-Extra-Bold-Italic {
+	@include font-Default-Settings;
+	font-family: $font1, $font-Default-Font-Family;
+	font-weight: 900;
+	font-style: italic;
+}
+
+@mixin font1-Black {
+	@include font-Default-Settings;
+	font-family: $font1, $font-Default-Font-Family;
+}
+
+@mixin font1-Black-Italic {
+	@include font-Default-Settings;
+	font-family: $font1, $font-Default-Font-Family;
+	font-style: italic;
+}
+
+
+// Font 2
+
+@mixin font2-Ultra-Light {
+	@include font-Default-Settings;
+	font-family: $font2, $font-Default-Font-Family;
+	font-weight: 100;
+}
+
+@mixin font2-Ultra-Light-Italic {
+	@include font-Default-Settings;
+	font-family: $font2, $font-Default-Font-Family;
+	font-weight: 100;
+	font-style: italic;
+}
+
+@mixin font2-Light {
+	@include font-Default-Settings;
+	font-family: $font2, $font-Default-Font-Family;
+	font-weight: 300;
+}
+
+@mixin font2-Light-Italic {
+	@include font-Default-Settings;
+	font-family: $font2, $font-Default-Font-Family;
+	font-weight: 300;
+	font-style: italic;
+}
+
+@mixin font2-Regular {
+	@include font-Default-Settings;
+	font-family: $font2, $font-Default-Font-Family;
+	font-weight: 400;
+}
+
+@mixin font2-Regular-Italic {
+	@include font-Default-Settings;
+	font-family: $font2, $font-Default-Font-Family;
+	font-weight: 400;
+	font-style: italic;
+}
+
+@mixin font2-Medium {
+	@include font-Default-Settings;
+	font-family: $font2, $font-Default-Font-Family;
+	font-weight: 600;
+}
+
+@mixin font2-Medium-Italic {
+	@include font-Default-Settings;
+	font-family: $font2, $font-Default-Font-Family;
+	font-weight: 600;
+	font-style: italic;
+}
+
+@mixin font2-Bold {
+	@include font-Default-Settings;
+	font-family: $font2, $font-Default-Font-Family;
+	font-weight: 700;
+}
+
+@mixin font2-Bold-Italic {
+	@include font-Default-Settings;
+	font-family: $font2, $font-Default-Font-Family;
+	font-weight: 700;
+	font-style: italic;
+}
+
+@mixin font2-Extra-Bold {
+	@include font-Default-Settings;
+	font-family: $font2, $font-Default-Font-Family;
+	font-weight: 900;
+}
+
+@mixin font2-Extra-Bold-Italic {
+	@include font-Default-Settings;
+	font-family: $font2, $font-Default-Font-Family;
+	font-weight: 900;
+	font-style: italic;
+}
+
+@mixin font2-Black {
+	@include font-Default-Settings;
+	font-family: $font2, $font-Default-Font-Family;
+}
+
+@mixin font2-Black-Italic {
+	@include font-Default-Settings;
+	font-family: $font2, $font-Default-Font-Family;
+	font-style: italic;
+}

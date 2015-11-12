@@ -1,0 +1,15 @@
+{
+  "transport": "sftp",
+  "hostname": "thepictureshop.fushia.be",
+  "port": "22",
+  "username": "webbird",
+  "password": "FreeEagle6736!",
+  "target": "/srv/users/webbird/apps/thepictureshop/public/wp-content/themes/thepictureshop",
+  "uploadOnSave": false,
+  "ignore": [
+    ".git/**",
+    ".remote-sync.json",
+    "node_modules/**",
+    "node_modules/**/.*"
+  ]
+}

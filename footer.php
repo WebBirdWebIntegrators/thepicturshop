@@ -37,7 +37,7 @@
 						<h3>Contact</h3>
 						<p>
 							<?php echo get_field('ts_contact_info__company_name','option'); ?><br/>
-							<span>Shopping center</span><br/>
+							<span>Wijnegem Shopping center</span><br/>
 							<span>(10/508)</span><br/>
 							<?php echo get_field('ts_contact_info__street_number','option'); ?><br/>
 							<?php echo get_field('ts_contact_info__postal_code__city','option'); ?><br/>
@@ -49,8 +49,43 @@
 				</div>
 			</div>
 			<div class="col2">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d624.7139921318104!2d4.5004332!3d51.2217289!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3f84c7b1a55d5%3A0x61e3e1c4a7c04af1!2sThe+Picture+Shop!5e0!3m2!1snl!2sbe!4v1435243615064" allowfullscreen></iframe>
-			</div>
+				<div class="map">
+					<div class="map__wrapper">
+						<div id="map" style="width: 100%; height: 100%"></div>
+						<script src="https://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
+						  <script type="text/javascript">
+						    var locations = [
+						      ['', 51.2213006, 4.5004274,17, 1],
+						    ];
+
+						    var map = new google.maps.Map(document.getElementById('map'), {
+						      zoom: 17,
+						      center: new google.maps.LatLng(51.2213006, 4.5004274,17),
+						      mapTypeId: google.maps.MapTypeId.ROADMAP,
+									scrollwheel: false,
+						    });
+
+						    var infowindow = new google.maps.InfoWindow();
+
+						    var marker, i;
+
+						    for (i = 0; i < locations.length; i++) {
+						      marker = new google.maps.Marker({
+						        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+										//icon: '/wp-content/themes/hugodejongh/img/google-maps-marker.png',
+						        map: map
+						      });
+
+						      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+						        return function() {
+						          infowindow.setContent(locations[i][0]);
+						          infowindow.open(map, marker);
+						        }
+						      })(marker, i));
+						    }
+						  </script>
+					</div>
+				</div>
 		</div>
 	</div>
 	<div class="footer__b2">
@@ -155,6 +190,9 @@
 					);
 					wp_nav_menu( $footer_copyrights ); }
 				?>
+				<div class="credentials">
+					<a href="http://fushia.be" target="_blank">Webdesign by Fushia</a>
+				</div>
 			</div>
 		</div>
 	</div>

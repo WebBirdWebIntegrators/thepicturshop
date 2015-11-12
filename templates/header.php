@@ -18,6 +18,9 @@
 		<div class="wrapper">
 			<div class="mnav-icon">
 					<i class="fa fa-bars" id="mnav-menu-open"></i>
+					<div class="logo">
+						<img src="<?php echo get_template_directory_uri(); ?>/img/logo-thepictureshop.png">
+					</div>
 			</div>
 			<div class="fnav">
 				<div class="wrapper">
@@ -94,7 +97,7 @@
 						'menu_class'      => 'menu',
 						'menu_id'         => '',
 						'echo'            => true,
-						'fallback_cb'     => 'wp_page_menu',
+						'fallback_cb'     => '',
 						'before'          => '',
 						'after'           => '',
 						'link_before'     => '',
@@ -115,7 +118,9 @@
 						$menu_locations = get_nav_menu_locations();
 						$menu_object = (isset($menu_locations[$menu_location]) ? wp_get_nav_menu_object($menu_locations[$menu_location]) : null);
 						$menu_name = (isset($menu_object->name) ? $menu_object->name : '');
+						echo '<a href="' . get_permalink('71') . '">';
 						echo '<h3>' . esc_html($menu_name) . '</h3>' ;
+						echo '</a>';
 					?>
 					<?php
 
@@ -149,7 +154,9 @@
 						$menu_locations = get_nav_menu_locations();
 						$menu_object = (isset($menu_locations[$menu_location]) ? wp_get_nav_menu_object($menu_locations[$menu_location]) : null);
 						$menu_name = (isset($menu_object->name) ? $menu_object->name : '');
+						echo '<a href="' . get_permalink('89') . '">';
 						echo '<h3>' . esc_html($menu_name) . '</h3>' ;
+						echo '</a>';
 					?>
 					<?php
 
@@ -183,7 +190,9 @@
 						$menu_locations = get_nav_menu_locations();
 						$menu_object = (isset($menu_locations[$menu_location]) ? wp_get_nav_menu_object($menu_locations[$menu_location]) : null);
 						$menu_name = (isset($menu_object->name) ? $menu_object->name : '');
+						echo '<a href="' . get_permalink('99') . '">';
 						echo '<h3>' . esc_html($menu_name) . '</h3>' ;
+						echo '</a>';
 					?>
 					<?php
 

@@ -1,5 +1,5 @@
 <?php
-	
+
 add_theme_support( 'automatic-feed-links' );
 add_theme_support( 'post-thumbnails' );
 add_theme_support( 'custom-header' );
@@ -32,15 +32,15 @@ add_action('init', 'load_exported_fields');
 include 'assets/woocommerce.php';
 
 function wb_check_theme_plugin_dependencies() {
-	
+
 	if ( ! class_exists('acf') ) {
-	
+
 		$output = '<div id="message" class="error">';
 			$output .= '<p>This theme requires the "Advanced Custom Fields Pro" plugin to be activated and/or installed.</p>';
 		$output .= '</div>';
-		
+
 		echo $output;
-	
+
 	}
 }
 
@@ -72,7 +72,7 @@ function webbird_custom_image_sizes( $sizes ) {
 
 add_filter( 'image_size_names_choose', 'webbird_custom_image_sizes' );
 
-register_nav_menus( 
+register_nav_menus(
 	array (
 		'header-mnav' => 'Header - Main navigation',
 		'header-fnav' => 'Header - Functional navigation',
@@ -114,21 +114,21 @@ add_action('wp_enqueue_scripts' , 'webbird_scripts');
 
 function webbird_scripts() {
 	wp_enqueue_script('jquery');
-	
+
 	wp_register_style( 'webbird-styles' , get_template_directory_uri() . '/css/styles.css');
 	wp_enqueue_style( 'webbird-styles' );
-		
+
 	wp_register_style( 'fontawesome' , get_template_directory_uri() . '/css/font-awesome.min.css' );
 	wp_enqueue_style( 'fontawesome' );
-	
+
 	wp_register_script( 'flexslider' , get_template_directory_uri() . '/js/jquery.flexslider.js' );
 	wp_enqueue_script( 'flexslider' );
 }
 
 function wb_add_google_fonts() {
-	
+
 	echo "<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800,900' rel='stylesheet' type='text/css'>";
-	
+
 }
 
 add_action('wp_head','wb_add_google_fonts');
@@ -138,7 +138,7 @@ $role_object->add_cap( 'edit_theme_options' );
 
 
 if( function_exists('acf_add_options_page') ) {
-	
+
 	acf_add_options_page(array(
 		'page_title' 	=> __('Theme Settings', 'thepictureshop'),
 		'menu_title'	=> __('Theme Settings', 'thepictureshop'),
@@ -148,28 +148,28 @@ if( function_exists('acf_add_options_page') ) {
 		'position'		=> '90',
 		'redirect'		=> false
 	));
-	
+
 	acf_add_options_sub_page(array(
 		'page_title' 	=> __('Contact Information Settings', 'thepictureshop'),
 		'menu_title'	=> __('Contact Information', 'thepictureshop'),
 		'slug'			=> 'contact-settings',
 		'parent_slug'	=> 'theme-settings',
 	));
-	
+
 	acf_add_options_sub_page(array(
 		'page_title' 	=> __('Site Credits Settings', 'thepictureshop'),
 		'menu_title'	=> __('Site Credits', 'thepictureshop'),
 		'slug'			=> 'site-credits-settings',
 		'parent_slug'	=> 'theme-settings',
 	));
-		
+
 	acf_add_options_sub_page(array(
 		'page_title' 	=> __('Social Media Settings', 'thepictureshop'),
 		'menu_title'	=> __('Social Media', 'thepictureshop'),
 		'slug'			=> 'social-media-settings',
 		'parent_slug'	=> 'theme-settings',
 	));
-	
+
 	acf_add_options_sub_page(array(
 		'page_title' 	=> __('Google Settings', 'thepictureshop'),
 		'menu_title'	=> __('Google', 'thepictureshop'),
@@ -185,7 +185,7 @@ add_filter('authenticate', 'webbird_allow_email_login', 20, 3);
 function webbird_allow_email_login( $user, $username, $password ) {
     if( is_email( $username ) ) {
         $user = get_user_by_email( $username );
-        
+
         if( $user ) $username = $user->user_login;
     }
     return wp_authenticate_username_password( null, $username, $password );

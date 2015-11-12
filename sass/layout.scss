@@ -1,0 +1,535 @@
+#header {
+	position: relative;
+	margin: 0px;
+	padding: 0px;
+
+	.header__b1 {
+		display: none;
+		position: relative;
+		margin: 0px;
+		padding: 0px;
+		background-position: center top;
+		background-size: cover;
+
+		.wrapper {
+
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+
+	.header__b2 {
+		position: relative;
+		margin: 0px;
+		padding: 0px;
+		background-image: url("/wp-content/themes/thepictureshop/img/bg-img-footer-1.png");
+
+		.wrapper {
+			position: relative;
+			display: table;
+			margin: 0 auto;
+			padding: 0px;
+			width: 100%;
+
+			.mnav-icon {
+				display: table-cell;
+				margin: 0px;
+				padding: 25px;
+				width: 50%;
+				vertical-align: middle;
+
+				i {
+					display: block;
+					margin: 0px;
+					padding: 0px;
+					@include fontawesome();
+					font-size: 1.75em;
+					line-height: 1;
+				}
+
+				.logo {
+					display: none;
+				}
+			}
+
+			.fnav {
+				display: none;
+				//display: table-cell;
+				margin: 0px;
+				padding: 0px;
+				width: 50%;
+				text-align: right;
+				vertical-align: middle;
+
+				.wrapper {
+					float: right;
+					margin: 0px;
+					padding: 0px;
+					width: auto;
+
+					ul {
+						display: table;
+						margin: 0px;
+						padding: 0px;
+						list-style: none;
+
+						li {
+							display: table-cell;
+							margin: 0px;
+							padding: 25px;
+							list-style-type: none;
+							border-right-style: solid;
+							border-right-width: 1px;
+							border-right-color: fade($white,12.5%);
+							vertical-align: middle;
+							transition: 0.5s ease-in-out;
+							width: 1px;
+
+							&:hover {
+								background-color: $color2;
+							}
+
+							a {
+								display: block;
+								margin: 0px;
+								padding: 0px;
+								text-decoration: none;
+								color: $white;
+
+								img {
+									margin: 0px;
+									padding: 0px;
+									display: block;
+									height: 30px;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.mnav-menu__desktop {
+				display: none;
+				position: absolute;
+				left: 0px;
+				top: 80px;
+				width: 30%;
+				background-color: $black;
+				z-index: 99;
+
+				ul {
+					margin: 0px;
+					padding: 0px;
+					list-style: none;
+
+					li {
+						margin: 0px;
+						padding: 25px;
+						list-style-type: none;
+						border-bottom-style: solid;
+						border-bottom-width: 1px;
+						border-bottom-color: fade($white,20%);
+
+						&:first-of-type {
+							border-top-style: solid;
+							border-top-width: 1px;
+							border-top-color: fade($white,20%);
+						}
+
+						a {
+							@include font1-Bold();
+							color: $white;
+							text-transform: uppercase;
+							text-decoration: none;
+							transition: 0.5s ease-in-out;
+
+							&:hover {
+								color: $color2;
+							}
+
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.header__b3 {
+		position: relative;
+		margin: 0px;
+		padding: 0px;
+		background-image: url("/wp-content/themes/thepictureshop/img/bg-img-footer-1.png");
+		opacity: 0.95;
+
+		.wrapper {
+			margin: 0px;
+			padding: 30px;
+			text-transform: uppercase;
+			text-align: center;
+
+			ul {
+				display: inline-block;
+				margin: 0 auto;
+				padding: 0px;
+				list-style: none;
+				width: auto;
+
+				li {
+					margin: 0px;
+					margin-bottom: 1em;
+					padding: 0px;
+					padding-bottom: 1em;
+					list-style-type: none;
+					text-align: center;
+					border-bottom-style: solid;
+					border-bottom-width: 1px;
+					border-bottom-color: fade($white,25%);
+
+					h3 {
+						margin: 0px;
+						margin-bottom: 0.5em;
+						padding: 0px;
+						@include font1-Extra-Bold();
+						color: $color2;
+					}
+
+					ul {
+						margin: 0px;
+						padding: 0px;
+
+						li {
+							margin: 0px;
+							padding: 0px;
+							border: none;
+
+							&.current-menu-item {
+
+								&:hover {
+
+									a {
+										color: inherit;
+									}
+								}
+
+								a {
+									padding: 0.3em;
+									padding-left: 0.5em;
+									padding-right: 0.5em;
+									color: $color1;
+									background-color: $color2;
+								}
+							}
+
+							a {
+								@include font1-Bold();
+								text-decoration: none;
+								color: $white;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#body {
+	position: relative;
+	margin: 0px;
+	padding: 0px;
+	background-image: url("../img/bg-img-1.jpg");
+
+	#breadcrumbs {
+		margin: 0px;
+		margin-bottom: 2em;
+		padding: 0px;
+		@include font1-Light();
+		color: mix($white, $color1, 50%);
+		text-transform: uppercase;
+
+		a {
+			color: inherit;
+			text-decoration: none;
+
+			&:hover {
+				color: $color2;
+			}
+		}
+
+		strong {
+			@include font1-Extra-Bold;
+		}
+	}
+
+	.home {
+
+		.home__b1 {
+			position: relative;
+			margin: 0px;
+			padding: 0px;
+			background-color: yellow;
+
+			.wrapper {
+				position: relative;
+				margin: 0px;
+				padding: 0px;
+
+				img {
+					width: 100%;
+					height: auto;
+				}
+			}
+		}
+	}
+
+	.page {
+		position: relative;
+		margin: 0px;
+		padding: 0px;
+
+		.page__b1 {
+			position: relative;
+			margin: 0px;
+			padding: 0px;
+
+			.wrapper {
+				position: relative;
+				margin: 0px;
+				padding: 0px;
+
+				.col1 {
+					position: relative;
+					margin: 0px;
+					padding: 30px;
+				}
+
+				.col2 {
+					position: relative;
+					margin: 0px;
+					padding: 30px;
+					background-color: rgba($color2, .30);
+
+					.featured-image {
+						position: absolute;
+						left: 0px;
+						right: 0px;
+						top: 0px;
+						bottom: 0px;
+						width: 100%;
+						height: 100%;
+						background-size: cover;
+						background-position: center center;
+						background-repeat: no-repeat;
+					}
+				}
+			}
+		}
+	}
+
+	.woocommerce {
+
+	}
+}
+
+#footer {
+	position: relative;
+	margin: 0px;
+	padding: 0px;
+
+	.footer__b1 {
+		position: relative;
+		margin: 0px;
+		padding: 0px;
+		background-image: url("/wp-content/themes/thepictureshop/img/bg-img-footer-1.png");
+
+		.wrapper {
+			position: relative;
+			margin: 0px;
+			padding: 0px;
+
+			.col1 {
+				position: relative;
+				margin: 0px;
+				padding: 30px;
+				text-align: center;
+
+				.footer-nav {
+					position: relative;
+					margin: 0px;
+					padding: 0px;
+
+					h3 {
+						margin: 0px;
+						margin-bottom: 20px;
+						padding: 0px;
+						color: $white;
+						@include font1-Extra-Bold();
+						text-transform: uppercase;
+					}
+
+					ul {
+						margin: 0px;
+						padding: 0px;
+						list-style: none;
+
+						li {
+							margin: 0px;
+							padding: 0px;
+							padding-top: 10px;
+							padding-bottom: 10px;
+							list-style-type: none;
+							border: none;
+							border-bottom-style: solid;
+							border-bottom-width: 1px;
+							border-bottom-color: fade($white,12.5%);
+
+							&:last-of-type {
+								padding-bottom: 0px;
+								border-bottom: none;
+							}
+
+							a {
+								@include font1-Bold();
+								text-transform: uppercase;
+								text-decoration: none;
+								color: $white;
+								transition: 0.5s ease-in-out;
+
+								&:hover {
+									color: $color2;
+								}
+							}
+						}
+					}
+				}
+
+				.contact {
+					position: relative;
+					margin: 0px;
+					margin-top: 60px;
+					padding: 0px;
+					color: $white;
+
+					h3 {
+						margin: 0px;
+						margin-bottom: 20px;
+						padding: 0px;
+						color: $white;
+						@include font1-Extra-Bold();
+						text-transform: uppercase;
+					}
+
+					p {
+
+						span {
+							color: $color2;
+						}
+					}
+				}
+			}
+
+			.col2 {
+				position: relative;
+				margin: 0px;
+				padding: 0px;
+				height: 400px;
+
+				.map {
+		      position: relative;
+					background-color: yellow;
+
+		      margin: 0;
+		      padding: 0;
+
+		      .map__wrapper {
+		        position: relative;
+
+		        height: 375px;
+		        margin: 0;
+		        padding: 0;
+		      }
+				}
+			}
+		}
+	}
+
+	.footer__b2 {
+		position: relative;
+		margin: 0px;
+		padding: 0px;
+		background-image: url("../img/bg-img-1.jpg");
+
+		.wrapper {
+			position: relative;
+			margin: 0px;
+			padding: 0px;
+
+			.col1 {
+				position: relative;
+				margin: 0px;
+				padding: 30px;
+				padding-bottom: 15px;
+				text-align: center;
+
+				ul {
+					display: inline-block;
+					margin: 0 auto;
+					padding: 0px;
+					list-style: none;
+
+					li {
+						margin: 0px;
+						margin-right: 15px;
+						padding: 0px;
+						float: left;
+						list-style-type: none;
+
+						&:last-of-type {
+							margin-right: 0px;
+						}
+
+						a {
+							text-decoration: none;
+
+							i {
+								display: block;
+								@include fontawesome();
+								font-size: 1.55em;
+								color: $color1;
+
+								&:hover {
+									color: $color2;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.col2 {
+				position: relative;
+				margin: 0px;
+				padding: 30px;
+				padding-top: 0px;
+				text-align: center;
+				font-size: 0.85em;
+
+				.credentials {
+					position: relative;
+					margin: 0;
+					padding: 0;
+					font-size: .85em;
+					line-height: 1;
+
+					a {
+						@include font1-Regular;
+						text-decoration: none;
+						color: inherit;
+					}
+				}
+			}
+		}
+	}
+}

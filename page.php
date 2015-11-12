@@ -6,10 +6,11 @@
 			<div class="wrapper">
 				<div class="col1">
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+						<?php if ( function_exists('yoast_breadcrumb') ) {
+							yoast_breadcrumb('<p id="breadcrumbs">','</p>');
+						} ?>
 						<div class="post" id="post-<?php the_ID(); ?>">
-							<?php
-							echo empty( $post->post_parent ) ? '<h2>' . get_the_title( $post->ID ) . '</h2>' : '<h2>' . get_the_title( $post->post_parent ) . '<h2>';
-							?>
+							
 							<?php the_title('<h1>','</h1>'); ?>
 							<?php the_content('<p>Read the rest of this page &raquo;</p>'); ?>
 						</div>
@@ -25,7 +26,7 @@
 						?>>
 					</div>
 				</div>
-			</div>	
+			</div>
 		</div>
 	</div>
 </div>
